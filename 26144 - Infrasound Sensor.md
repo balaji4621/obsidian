@@ -32,3 +32,25 @@ Infrasound sensors measure low-frequency atmospheric pressure waves ($< 20\text{
 - [ ] Schematic & PCB layout for low-noise analog signal path.
 - [ ] Prototype sub-20 Hz active low-pass filter & 24-bit ADC readout.
 - [ ] Test frequency response against calibrated pressure signals.
+
+---
+
+## 💰 Estimated Prototype Cost Breakdown (INR)
+
+| Component / Subsystem | Specifications | Est. Cost (INR) |
+|---|---|---|
+| **Differential Acoustic Chamber** | Custom CNC aluminum/acrylic chamber with capillary equalization port | ₹1,800 – ₹2,500 |
+| **Sensing Diaphragm Element** | Piezoresistive nanocomposite / high-resolution pressure film | ₹1,200 – ₹2,000 |
+| **Analog Front-End (AFE)** | Ultra-low noise InAmp (INA128/AD8421) + OPA2188 active filter | ₹1,000 – ₹1,500 |
+| **Digitization Board** | 24-bit $\Delta\Sigma$ ADC (ADS1256) + Ultra-low noise LDO (TPS7A47) | ₹1,200 – ₹1,800 |
+| **Microcontroller Unit** | ESP32-S3 / STM32F4 (FFT processing & WiFi/LoRa dispatch) | ₹600 – ₹1,000 |
+| **Custom PCB & Enclosure** | 2-layer PCB fabrication + IP65 weatherproof housing | ₹1,500 – ₹2,200 |
+| **Total Estimated Prototype Cost** | **Fully Functional Sensor Hardware** | **₹7,300 – ₹11,000 INR** (~$90–$135 USD) |
+
+---
+
+## 📊 Feasibility Analysis
+
+- **Technical Feasibility:** **8.5 / 10** (High) — Achievable using low-noise instrumentation amplifiers, active analog low-pass filtering ($f_c = 20\text{ Hz}$), and 24-bit ADC readout.
+- **Hackathon Timeline Feasibility:** **9.0 / 10** — A functional prototype with live infrasound FFT waveform streaming can be built within a 36-hour hackathon window using an analog breadboard/breakout setup before final PCB integration.
+- **Key Risk & Mitigation:** Thermal drift and 1/f noise at $<1\text{ Hz}$ $\rightarrow$ Mitigated using a differential Wheatstone bridge topology and low-pass capillary pressure equalization.
