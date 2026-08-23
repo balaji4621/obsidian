@@ -54,3 +54,16 @@ Infrasound sensors measure low-frequency atmospheric pressure waves ($< 20\text{
 - **Technical Feasibility:** **8.5 / 10** (High) — Achievable using low-noise instrumentation amplifiers, active analog low-pass filtering ($f_c = 20\text{ Hz}$), and 24-bit ADC readout.
 - **Hackathon Timeline Feasibility:** **9.0 / 10** — A functional prototype with live infrasound FFT waveform streaming can be built within a 36-hour hackathon window using an analog breadboard/breakout setup before final PCB integration.
 - **Key Risk & Mitigation:** Thermal drift and 1/f noise at $<1\text{ Hz}$ $\rightarrow$ Mitigated using a differential Wheatstone bridge topology and low-pass capillary pressure equalization.
+
+
+### 💡 Low-Cost Hackathon MVP Version (Budget-Optimized)
+
+If budget is a priority, the cost can be reduced to **₹1,200 – ₹2,500 INR** (~$15 – $30 USD):
+
+| Component / Subsystem | Low-Cost Alternative | Est. Cost (INR) |
+|---|---|---|
+| **Acoustic Chamber** | 3D-printed enclosure + laser-cut acrylic with capillary needle port | ₹250 – ₹400 |
+| **Sensing Element** | High-precision MEMS sensor (BME280 / MS5611) or differential electret diaphragm | ₹200 – ₹450 |
+| **Digitization & MCU** | ESP32-WROOM (built-in Wi-Fi/BT) + 16-bit ADS1115 ADC module | ₹550 – ₹850 |
+| **Power & Enclosure** | DIY IP65 housing + USB Power / Li-Po battery step-up | ₹250 – ₹500 |
+| **Minimal Hackathon MVP Total** | **Fully Working Low-Cost Prototype** | **₹1,250 – ₹2,200 INR** (~$15–$27 USD) |
