@@ -31,15 +31,39 @@
 
 ### 5. 🎯 [[05_Step_by_Step_Assembly_and_Testing_Playbook]]
 - **Validation Tests:** Syringe Tap Decay, Balloon Pop Impulse, Fan Wind Rejection, Speaker Frequency Sweep.
-- **3-Minute Pitch Script:** Hook $ightarrow$ Problem $ightarrow$ Hardware Walkthrough $ightarrow$ Balloon Pop Live Demo $ightarrow$ Closing Vision.
+- **3-Minute Pitch Script:** Hook $
+ightarrow$ Problem $
+ightarrow$ Hardware Walkthrough $
+ightarrow$ Balloon Pop Live Demo $
+ightarrow$ Closing Vision.
 
 ---
 
 ## 📊 Numerical Signal Trace (1.0 Pa Wave @ 5 Hz)
-`1.0 Pa Air Wave` $ightarrow$ `Porous Hose Array (-20dB Wind)` $ightarrow$ `Chamber 0.02Hz HPF` $ightarrow$ `MPXV7002 Sensor (1.0 mV)` $ightarrow$ `INA128 InAmp (101.2 mV)` $ightarrow$ `4th-Order LPF (20Hz Cutoff)` $ightarrow$ `ADS1115 ADC (1619 LSBs)` $ightarrow$ `ESP32 IIR Filter & 128-pt FFT (5.07 Hz Peak)` $ightarrow$ `STA/LTA Trigger (>3.5)` $ightarrow$ `Python UI Red Alert`.
+`1.0 Pa Air Wave` $
+ightarrow$ `Porous Hose Array (-20dB Wind)` $
+ightarrow$ `Chamber 0.02Hz HPF` $
+ightarrow$ `MPXV7002 Sensor (1.0 mV)` $
+ightarrow$ `INA128 InAmp (101.2 mV)` $
+ightarrow$ `4th-Order LPF (20Hz Cutoff)` $
+ightarrow$ `ADS1115 ADC (1619 LSBs)` $
+ightarrow$ `ESP32 IIR Filter & 128-pt FFT (5.07 Hz Peak)` $
+ightarrow$ `STA/LTA Trigger (>3.5)` $
+ightarrow$ `Python UI Red Alert`.
 
 ---
 
 ## 💰 Budget Options
 - **Hackathon MVP:** **₹1,750 INR** (~$21 USD)
 - **Production Spec:** **₹9,500 INR** (~$115 USD)
+
+
+---
+
+## 🌡️ Dynamic Thermal Drift Compensation (Adaptive IIR C++)
+Because temperature shifts air viscosity $\mu(T)$ via Sutherland's law $\mu(T) = \mu_0 \left(\frac{T}{T_0}\right)^{3/2} \frac{T_0+S}{T+S}$, the capillary high-pass corner $f_c$ shifts by $\sim 20\%$ over $-10^\circ\text{C}$ to $+55^\circ\text{C}$.
+
+We implement dynamic IIR filter coefficient tracking in `src/adaptive_iir_thermal.cpp`:
+- **Capillary Geometry:** $d = 0.20\text{ mm}, L = 70\text{ mm}, V = 350\text{ mL} \rightarrow f_c = 0.020\text{ Hz}$
+- **Dynamic Coefficient:** $\alpha(T) = \frac{\text{RC}(T)}{\text{RC}(T) + \Delta t}$ updated continuously from NTC/BME280 temperature readings.
+- **Welch Averaging:** 4 overlapping FFT spectra for $+6\text{ dB}$ SNR boost, lowering minimum detectable signal to $22\text{ mPa}$.
