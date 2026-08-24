@@ -1,69 +1,30 @@
-# 📡 PS ID 26144: Microbarometer Infrasound Sensor (NTRO)
+# 📡 PS ID 26144: Microbarometer Infrasound Sensor (NTRO) Master Note
 
 > **Sponsoring Agency:** National Technical Research Organisation (NTRO)  
-> **Category:** Hardware | **Theme:** Precision Sensors / Strategic Monitoring  
-> **Core Objective:** Design and fabricate a custom microbarometer from scratch to detect sub-20 Hz atmospheric pressure waves (explosions, volcanoes, rocket launches) while rejecting wind noise and thermal drift.
+> **Target:** Design and construct a ground-up microbarometer detecting sub-20 Hz infrasound (fc = 0.020 Hz, 100 SPS, AFE Gain = 101.2x, 20Hz LPF, STA/LTA trigger).
 
 ---
 
-## 🧠 Module Overview & Navigation
-
-### 1. 🔬 [[01_Physics_and_Fundamentals]]
-- **Wavelengths:** Sub-20 Hz waves have wavelengths $>34	ext{ meters}$, allowing them to travel $1,000	ext{s of km}$ without obstacle blocking.
-- **Capillary Leak Physics:** Hagen-Poiseuille law $R_a = rac{128\mu L}{\pi d^4}$ creates an acoustic high-pass filter $f_c = rac{1}{2\pi R_a C_a} = 0.02	ext{ Hz}$.
-- **Wheatstone Bridge & Op-Amps:** Differential sensing cancels thermal drift; zero-drift OPA2188 eliminates $1/f$ flicker noise.
-
-### 2. 🛠️ [[02_Mechanical_Transducer_Build]]
-- **Chamber:** $350	ext{ mL}$ sealed acrylic/PVC chamber ($4	ext{mm}$ wall thickness).
-- **Capillary Leak:** $27	ext{-Gauge}$ stainless steel needle ($d=0.21	ext{mm}, L=30	ext{mm}$) tuned to $	au = 8	ext{ seconds}$ decay time.
-- **Windscreen Array:** 4-arm porous soaker hose rosette ($1.0	ext{m}$ aperture) rejecting wind noise by $>20	ext{ dB}$.
-
-### 3. ⚡ [[03_Basic_Circuit_and_AFE_Build]]
-- **Stage 1 (InAmp):** INA128 ($R_g = 499\ \Omega$, Gain $= 101.2	ext{x}$, CMRR $>100	ext{ dB}$).
-- **Stage 2 (Vref Bias):** OPA2188 op-amp buffer providing $1.65	ext{V}$ mid-supply reference.
-- **Stage 3 (LPF Filter):** 4th-order Sallen-Key Butterworth LPF ($f_c = 20	ext{ Hz}$, $R=11.3	ext{k}\Omega, C1=1\mu	ext{F}, C2=390	ext{nF}$).
-- **Power Integrity:** TPS7A4700 ultra-low noise LDO + star grounding.
-
-### 4. 💻 [[04_Digitization_and_DSP_Firmware]]
-- **ADC:** ADS1115 ($16	ext{-bit}$, $250	ext{ SPS}$) or ADS1256 ($24	ext{-bit}$, $100	ext{ SPS}$).
-- **Firmware:** ESP32-S3 $100	ext{ Hz}$ microsecond timer loop + $0.05	ext{ Hz}$ DC removal IIR filter + STA/LTA trigger algorithm.
-- **Dashboard:** Real-time Python PyQtGraph/Matplotlib waterfall heatmap UI.
-
-### 5. 🎯 [[05_Step_by_Step_Assembly_and_Testing_Playbook]]
-- **Validation Tests:** Syringe Tap Decay, Balloon Pop Impulse, Fan Wind Rejection, Speaker Frequency Sweep.
-- **3-Minute Pitch Script:** Hook $
-ightarrow$ Problem $
-ightarrow$ Hardware Walkthrough $
-ightarrow$ Balloon Pop Live Demo $
-ightarrow$ Closing Vision.
+## 🛠️ System Architecture & PDF Optimization Summary
+- **Capillary Leak:** $d = 0.288	ext{ mm ID} 	imes 30.0	ext{ mm length}$ for $V = 350	ext{ mL}$ ($C_a = 2.47 	imes 10^{-9}	ext{ m}^3/	ext{Pa}$) $ightarrow f_c = 0.020	ext{ Hz}, 	au = 8.0	ext{s}$.
+- **Analog Front-End:** INA128 ($R_g = 499\ \Omega$) + Dual OPA2188 4th-order Sallen-Key LPF ($f_c = 20	ext{ Hz}$) + $1.65	ext{V}$ Vref buffer.
+- **Power Optimization:** Disabling OLED during acquisition drops power to $<50	ext{ mW}$, expanding battery life to **$>180	ext{ hours}$** on 3.7V / 3000 mAh Li-Po.
+- **DSP & Averaging:** Welch 4-spectrum 50% overlap FFT averaging gives $+6	ext{ dB}$ SNR boost, detecting tones down to $22	ext{ mPa}$.
+- **Thermal Compensation:** Sutherland's law $\mu(T)$ tracking in `src/adaptive_iir_thermal.cpp` compensates for $\pm 8.6\%$ viscosity shift.
 
 ---
 
-## 📊 Numerical Signal Trace (1.0 Pa Wave @ 5 Hz)
-`1.0 Pa Air Wave` $
-ightarrow$ `Porous Hose Array (-20dB Wind)` $
-ightarrow$ `Chamber 0.02Hz HPF` $
-ightarrow$ `MPXV7002 Sensor (1.0 mV)` $
-ightarrow$ `INA128 InAmp (101.2 mV)` $
-ightarrow$ `4th-Order LPF (20Hz Cutoff)` $
-ightarrow$ `ADS1115 ADC (1619 LSBs)` $
-ightarrow$ `ESP32 IIR Filter & 128-pt FFT (5.07 Hz Peak)` $
-ightarrow$ `STA/LTA Trigger (>3.5)` $
-ightarrow$ `Python UI Red Alert`.
+## 📚 Navigation Links
+- [[00_Master_Architecture_and_Deep_Analysis]]
+- [[01_Physics_and_Fundamentals]]
+- [[02_Mechanical_Transducer_Build]]
+- [[03_Basic_Circuit_and_AFE_Build]]
+- [[04_Digitization_and_DSP_Firmware]]
+- [[05_Step_by_Step_Assembly_and_Testing_Playbook]]
+- [[full_engineering_analysis_report]]
 
 ---
 
 ## 💰 Budget Options
-- **Hackathon MVP:** **₹1,750 INR** (~$21 USD)
-- **Production Spec:** **₹9,500 INR** (~$115 USD)
-
-
----
-
-## 🌡️ Dynamic Thermal Drift Compensation (Adaptive IIR C++)
-Because temperature shifts air viscosity $\mu(T)$ via Sutherland's law $\mu(T) = \mu_0 \left(\frac{T}{T_0}\right)^{3/2} \frac{T_0+S}{T+S}$, the capillary high-pass corner $f_c$ shifts by $\sim 20\%$ over $-10^\circ\text{C}$ to $+55^\circ\text{C}$.
-
-We implement dynamic IIR filter coefficient tracking in `src/adaptive_iir_thermal.cpp`:
-- **Capillary Geometry:** $d = 0.20\text{ mm}, L = 70\text{ mm}, V = 350\text{ mL} \rightarrow f_c = 0.020\text{ Hz}$
-- **Dynamic Coefficient:** $\alpha(T) = \frac{\text{RC}(T)}{\text{RC}(T) + \Delta t}$ updated continuously from NTC/BME280 temperature readings.
-- **Welch Averaging:** 4 overlapping FFT spectra for $+6\text{ dB}$ SNR boost, lowering minimum detectable signal to $22\text{ mPa}$.
+- **Hackathon MVP:** **₹1,900 INR** (~$23 USD)
+- **Production Spec:** **₹48,000 INR** (~$580 USD)
