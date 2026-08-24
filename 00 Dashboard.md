@@ -1,21 +1,24 @@
-# 🎯 SIH 2026 Master Selection Dashboard
+# 🎯 SIH 2026 Selection & Project Hub
 
-Welcome to your primary selection hub powered by **`op`** (Master 2026 Hardware List).
+Welcome to your central workspace for **Smart India Hackathon (SIH) 2026**.
 
-## 🚀 Primary Workspace File
-- 📄 **[[op]]** — Master list of **39 strictly eligible SIH 2026 Hardware Problem Statements** (0 duplicates from 2024/2025).
-
----
-
-## 📊 Summary Statistics
-- **Total SIH 2026 Hardware PS:** 54
-- **Duplicates Removed (2024/2025 repeats):** 15
-- **Final Target Selection Pool (`op`):** **39**
+## 🚀 Selected Project
+- 📡 **[[PS 26144 - Microbarometer Infrasound Sensor]]** — *Selected Target Project (NTRO)*
 
 ---
 
-## 🛠️ Step-by-Step Selection Workflow
-1. Open **[[op]]**.
-2. Filter by domain tags (e.g. `#RoboticsAndDrones`, `#MedTechBioTechHealthTech`, `#SmartVehicles`, `#SmartAutomation`).
-3. Check the status box `[x] Shortlisted` on your top candidates.
-4. Record team feasibility notes in **[[Shortlisted Ideas]]**.
+## 📚 Master Project Navigation
+- 📄 **[[op]]** — Master List of 39 Eligible SIH 2026 Hardware Problems.
+- ⚡ **[[rp_analysis]]** — Executive Glimpse & Comparison of 8 Ground-Up Hardware Projects.
+- 📡 **[[PS 26144 - Microbarometer Infrasound Sensor]]** — Complete Engineering Guide, Physics, Circuit Schematics, DSP Code & Troubleshooting.
+
+---
+
+## 📋 Hackathon Execution Status
+- [x] Problem Statement Selected: **PS ID 26144 (NTRO)**
+- [x] Scientific Fundamentals & Transduction Physics Documented
+- [x] Mechanical Chamber & Capillary Leak Design Completed
+- [x] Low-Noise Analog Front-End (AFE) Circuit Designed
+- [x] ESP32-S3 Firmware & Python Live Waterfall UI Developed
+- [ ] Breadboard Circuit Assembly & Syringe Decay Test
+- [ ] 3-Minute Pitch Rehearsal & Balloon Pop Demo Setup
