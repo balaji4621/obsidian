@@ -13,12 +13,14 @@ updated: 2026-08-25
 | Project | Status | Next Action |
 |---|---|---|
 | 📡 **[[PS 26144 - Microbarometer Infrasound Sensor]]** | 🟡 Planning Complete → Build Phase | Order BOM (₹3,900) & assemble chamber |
+| 🎬 **[[Antigravity Video Engine Master Hub]]** | 🟢 Production Ready | Run `python server.py` for Web UI |
 
 ---
 
 ## 🗺️ Vault Map
 
 ### 📁 [[01 Projects]] — What I'm Building
+- **[[Antigravity Video Engine Master Hub]]** ← Master AI Video Production & Editing Engine
 - **[[PS 26144 - Microbarometer Infrasound Sensor]]** ← Master note (start here)
 
 ### 📁 [[02 Research]] — Why I Chose It
