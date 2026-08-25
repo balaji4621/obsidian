@@ -1,24 +1,49 @@
-# 🎯 SIH 2026 Selection & Project Hub
+---
+tags: [dashboard, moc]
+updated: 2026-08-25
+---
 
-Welcome to your central workspace for **Smart India Hackathon (SIH) 2026**.
+# 🏠 BIGBOY Vault — Home
 
-## 🚀 Selected Project
-- 📡 **[[PS 26144 - Microbarometer Infrasound Sensor]]** — *Selected Target Project (NTRO)*
+> **Flow:** `Research → Decision → Engineering Plan → Build → Pitch`
 
 ---
 
-## 📚 Master Project Navigation
-- 📄 **[[op]]** — Master List of 39 Eligible SIH 2026 Hardware Problems.
-- ⚡ **[[rp_analysis]]** — Executive Glimpse & Comparison of 8 Ground-Up Hardware Projects.
-- 📡 **[[PS 26144 - Microbarometer Infrasound Sensor]]** — Complete Engineering Guide, Physics, Circuit Schematics, DSP Code & Troubleshooting.
+## 🎯 Active Project
+| Project | Status | Next Action |
+|---|---|---|
+| 📡 **[[PS 26144 - Microbarometer Infrasound Sensor]]** | 🟡 Planning Complete → Build Phase | Order BOM (₹3,900) & assemble chamber |
 
 ---
 
-## 📋 Hackathon Execution Status
-- [x] Problem Statement Selected: **PS ID 26144 (NTRO)**
-- [x] Scientific Fundamentals & Transduction Physics Documented
-- [x] Mechanical Chamber & Capillary Leak Design Completed
-- [x] Low-Noise Analog Front-End (AFE) Circuit Designed
-- [x] ESP32-S3 Firmware & Python Live Waterfall UI Developed
-- [ ] Breadboard Circuit Assembly & Syringe Decay Test
-- [ ] 3-Minute Pitch Rehearsal & Balloon Pop Demo Setup
+## 🗺️ Vault Map
+
+### 📁 [[01 Projects]] — What I'm Building
+- **[[PS 26144 - Microbarometer Infrasound Sensor]]** ← Master note (start here)
+
+### 📁 [[02 Research]] — Why I Chose It
+- **[[Eligible Hardware Problem Statements]]** — Full SIH hardware list
+- **[[Shortlisted Ideas]]** — Selection funnel
+- **[[rp_analysis]]** — Executive glimpse of 8 ground-up projects
+- **[[full_engineering_analysis_report]]** — 9-domain OPT1–OPT9 analysis
+
+### 📁 [[03 Execution Plans]] — How I'll Build It
+- **[[06_Deep_Thinking_and_Brainstorming_Session]]** — Obstacles, power budget, jury Q&A
+- **[[07_Elite_Strategic_Executive_Plan]]** — Blueprint, 4 sprints, budget, pre-mortem
+
+### 📁 [[04 Production]] — How I'll Present It
+- **[[full_video_production_plan]]** — Video script, shot list, export settings
+
+### 📁 [[99 Archive]] — Raw Data
+- **[[op]]** — Original problem statement dump
+
+---
+
+## ⚡ Quick Links (PS 26144 Core Specs)
+| Parameter | Value |
+|---|---|
+| Capillary Leak | 0.288 mm ID × 30 mm → $f_c = 0.020$ Hz |
+| AFE | INA128 Gain 101.2× + OPA2188 20 Hz LPF |
+| Firmware | ESP32-S3 @ 100 SPS + STA/LTA trigger |
+| MVP Budget | ₹1,900 (single tower) / ₹3,900 (dual) |
+| Battery | >180 h (<45 mW avg) |

@@ -1,4 +1,4 @@
-# 🌟 Shortlisted SIH 2026 Hardware Problem Statements
+ 🌟 Shortlisted SIH 2026 Hardware Problem Statements
 
 Use this note to shortlist your top choices from [[Eligible Hardware Problem Statements]].
 
