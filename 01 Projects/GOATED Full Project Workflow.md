@@ -1,25 +1,10 @@
----
-tags: [workflow, sih2026, master-guide, goated-hybrid]
-updated: 2026-08-25
----
-
 # 🏆 SIH 2026 TOP-1 GUARANTEED WINNER: END-TO-END MASTER WORKFLOW
 **Project:** GOATED Hybrid Coin-Sized TinyML Microbarometer Infrasound Sensor  
 **Sponsoring Agency:** National Technical Research Organisation (NTRO) | **PS ID:** 26144  
+**Target Domain:** Sub-20 Hz Strategic Surveillance, Disaster Warning & Gas/Structural Monitoring  
 
 ---
 
-> [!toc] **TABLE OF CONTENTS (QUICK JUMP)**
-> - [[#📌 EXECUTIVE SUMMARY & WINNING ARCHITECTURE]]
-> - [[#⚙️ PHASE 0: SOFTWARE ENVIRONMENT SETUP (DAY 1 MORNING - 2 HOURS)]]
-> - [[#🛒 PHASE 1: PROCUREMENT & BOM BREAKDOWN (DAY 1 AFTERNOON - 1 HOUR)]]
-> - [[#🧊 PHASE 2: 3D CAD & MECHANICAL CHAMBER BUILD (DAY 2 - 4 HOURS)]]
-> - [[#🔌 PHASE 3: CIRCUIT DESIGN & PCB FABRICATION (DAY 3 - 6 HOURS)]]
-> - [[#💻 PHASE 4: ESP32 FIRMWARE & TINYML ENGINE (DAY 4 - 6 HOURS)]]
-> - [[#🔬 PHASE 5: VALIDATION PROOF PACK (DAY 5 - 4 HOURS)]]
-> - [[#🏆 PHASE 6: 3-MINUTE WINNING PITCH SCRIPT & JURY Q&A]]
-
----
 ## 📌 EXECUTIVE SUMMARY & WINNING ARCHITECTURE
 
 This master workflow defines the complete top-to-bottom engineering path to construct, validate, and pitch the **GOATED Hybrid Infrasound Sensor Module**.
@@ -54,6 +39,14 @@ This master workflow defines the complete top-to-bottom engineering path to cons
   [ PHASE 6 ] ──► 3-Minute Winning Stage Pitch & Jury Q&A Defense (Hackathon Day)
 ===================================================================================================
 ```
+
+---
+
+
+### 🚀 EXTRA MERGED INNOVATIONS (SWARM MESH, BIST & SOLAR HARVESTING)
+1. **ESP-NOW Swarm TDOA Mesh:** Nodes form a mesh to triangulate event origin coordinates $(\hat{x}, \hat{y})$ in real time.
+2. **Acoustic BIST Auto-Diagnostic:** Micro-piezo ping verifies capillary leak health ($	au=8.0\text{s}$) automatically every 24 hours.
+3. **Solar Energy Harvester:** BQ25570 MPPT harvester + mini 50x50mm solar panel for indefinite deployment.
 
 ---
 

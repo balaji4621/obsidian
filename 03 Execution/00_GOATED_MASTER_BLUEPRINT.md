@@ -40,3 +40,19 @@ modern edge computing into a single 50mm x 50mm coin-sized credit-card module:
 - GOATED Hybrid Coin Module (2-Layer PCB) : Rs. 3,650 INR ($44 USD)
 - Imported Commercial Benchmark (Chaparral) : Rs. 4,50,000 INR ($5,400 USD)
 ================================================================================
+
+
+4. EXTRA MERGED INNOVATIVE FEATURES (THE ULTIMATE SIH ADVANTAGE)
+--------------------------------------------------------------------------------
+- FEATURE 1: TDOA Swarm Triangulation (ESP-NOW / LoRaWAN Mesh)
+  Multiple coin-sized nodes form a self-healing mesh network. Using Time-Difference-
+  of-Arrival (TDOA) math across 3+ nodes, the system calculates the EXACT GPS coordinates
+  of distant explosions or gas leaks in real time!
+
+- FEATURE 2: Built-In Self-Test (BIST) Acoustic Auto-Diagnostic
+  An integrated micro-piezo transponder inside Chamber A fires a 5 Hz calibration ping
+  every 24 hours, auto-verifying sensor sensitivity, diaphragm stiffness, and capillary health.
+
+- FEATURE 3: Solar & Ambient Vibration Hybrid Energy Harvester
+  Pairs a mini 50x50mm 5V solar panel with a BQ25570 energy harvester IC to charge the Li-Po
+  battery continuously, enabling 100% indefinite field deployment without battery swaps!
