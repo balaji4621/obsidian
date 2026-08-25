@@ -1,77 +1,38 @@
 ---
-tags: [dashboard, sih2026, main-hub]
+tags: [dashboard, sih2026, goated-hybrid]
 updated: 2026-08-25
 ---
 
-# 🚀 SIH 2026 Master Workspace
+# 🏆 GOATED Hybrid Infrasound Master Workspace
 
-> [!info] **SELECTED PROJECT:** [[Microbarometer Infrasound Sensor]] (PS ID 26144 - NTRO)
-> A ground-up, 100% indigenous microbarometer sensor for sub-20 Hz atmospheric infrasound detection (volcanoes, rockets, explosions). Budget: **₹1,900 MVP** | **₹3,650 Patent Edition**.
-
----
-
-## 🧭 Vault Navigation Map
-
-```
-                     ┌─────────────────────────────────────────┐
-                     │            00 DASHBOARD                 │
-                     └────────────────────┬────────────────────┘
-                                          │
-         ┌───────────────────┬────────────┴───────────┬───────────────────┐
-         ▼                   ▼                        ▼                   ▼
-  📁 01 PROJECTS      📁 02 RESEARCH          📁 03 EXECUTION     📁 04 MEDIA & VIDEO
-  • Microbarometer    • Problem List          • Strategic Blueprint• Video Production
-  • Beginner Guide    • Full Analysis         • PCB & CAD Design   • Visual Telemetry
-                      • Shortlist             • Patent Innovation
-```
+> [!success] **SELECTED TARGET PROJECT:** [[GOATED Hybrid Infrasound Master Plan]]
+> **PS ID 26144 (NTRO)** — World's first $50	imes 50	ext{ mm}$ Coin-Sized TinyML Microbarometer Sensor. Budget: **₹1,900 MVP** | **₹3,650 Hybrid Coin Module**.
 
 ---
 
-### 🟢 01 Projects — What We Are Building
-> [!success] Primary Project Folder
-- 📡 **[[Microbarometer Infrasound Sensor]]** — Complete master specification, pinouts, and system summary.
-- 🔰 **[[Beginner Build Guide]]** — Absolute step-by-step beginner guide (Start Here!).
+## 🗺️ Master Project Navigation
+
+### 🟢 [[01 Projects]] — Core System & Workflow
+- **[[GOATED Hybrid Infrasound Master Plan]]** — Complete Master Architecture, Transducer Specs & Benchmarks.
+- **[[GOATED Full Project Workflow]]** — Phase 0 to Phase 6 Top-to-Bottom Execution Guide.
 
 ---
 
-### 🔵 02 Research & Analysis — Science & Comparisons
-> [!tip] Technical Evaluation & Trade-offs
-- 🔬 **[[Full Engineering Analysis]]** — 18-page deep-dive optimization (OPT1–OPT9 math & physics).
-- ⚡ **[[Executive Project Glimpse]]** — Executive summary of 8 ground-up hardware projects.
-- 📋 **[[Eligible Hardware Problems]]** — Clean index of 39 fresh SIH 2026 hardware problems.
-- 🌟 **[[Shortlisted Ideas]]** — Team decision matrix & feasibility rankings.
+### 🟣 [[03 Execution]] — Blueprint & Execution Modules
+- **[[00_GOATED_MASTER_BLUEPRINT]]** — Executive Summary, Signal Flow Matrix & Budget.
+- **[[01_GOATED_PHYSICS_AND_MATH]]** — Hagen-Poiseuille $R_a$, $C_a$, $f_c=0.020	ext{ Hz}$, & Sutherland's Law $\mu(T)$.
+- **[[02_GOATED_CAD_AND_MECHANICAL_DESIGN]]** — SLA 3D Chamber OpenSCAD Model Script.
+- **[[03_GOATED_CIRCUIT_AND_PCB_KICAD]]** — 2-Layer JLCPCB Schematic Netlist & BOM CSV.
+- **[[04_GOATED_FIRMWARE_TINYML_DSP]]** — ESP32-S3 Firmware Code & TFLite 1D-CNN Model.
+- **[[05_GOATED_TESTING_PROOF_AND_PITCH]]** — 96.25% Confusion Matrix & 3-Min Stage Pitch Script.
 
 ---
 
-### 🟣 03 Execution — Hardware, PCB, CAD & Innovation
-> [!quote] Ground-Up Engineering Suite
-- 💡 **[[Patent Innovation Plan]]** — Coin-sized PCB microfluidic leak + TinyML + dual-chamber thermal cancellation.
-- 📐 **[[Strategic Blueprint]]** — System context diagram, 4-sprint critical path, budget, & pre-mortem.
-- 🔌 **[[PCB Circuit & Layout Guide]]** — Schematic netlist, INA128 AFE, OPA2188 LPF, & 2-layer PCB layout.
-- 🧊 **[[3D CAD Chamber Model]]** — OpenSCAD 3D printable acoustic chamber generator script.
-- 🧲 **[[Transducer Physics Matrix]]** — Comparison of capacitive, piezoresistive, optical, and MEMS sensing.
-- 🧠 **[[Brainstorming & Defense Guide]]** — Jury Q&A defense cheat sheet (10 tough judge questions).
+## 📊 Quick Specification Benchmark
 
----
-
-### 🎥 04 Media & Video — Pitch & Presentations
-> [!example] Demo & Presentation Package
-- 🎬 **[[Video Production Guide]]** — 3-minute scene-by-scene script, shot list, & export settings.
-
----
-
-### 📦 99 Archive — Raw Data
-- 🗄️ **[[Master Hardware Dump]]** — Raw unformatted problem statements dump.
-
----
-
-## 📊 Quick Specification Reference
-
-| Parameter | Value | Target |
+| Parameter | GOATED Hybrid Module | Commercial Imports (Chaparral 64Vx2) |
 |---|---|---|
-| **Frequency Band** | $0.02	ext{ Hz}$ to $20.0	ext{ Hz}$ | Sub-audible infrasound |
-| **Capillary Leak** | $0.288	ext{ mm ID} 	imes 30.0	ext{ mm}$ | $f_c = 0.020	ext{ Hz}\ (	au = 8.0	ext{s})$ |
-| **Amplification** | INA128 InAmp ($G = 101.2	ext{x}$) | $8	ext{ nV}/\sqrt{	ext{Hz}}$ voltage noise |
-| **Filter** | 4th-Order Butterworth LPF ($f_c = 20	ext{ Hz}$) | $-32	ext{ dB}$ attenuation @ $100	ext{ Hz}$ |
-| **Battery Life** | **$> 180	ext{ Hours}$** ($< 45	ext{ mW}$) | $3.7	ext{V } 3000	ext{ mAh}$ Li-Po |
-| **MVP Cost** | **₹1,900 INR** ($23 USD) | Commercial import: ₹4.5 Lakhs |
+| **Unit Cost** | **₹1,900 MVP / ₹3,650 Hybrid** | ₹4,50,000+ ($5,400 USD) |
+| **Form Factor** | **180g (50x50mm Coin Module)** | 3.2 kg (Bulky jar) |
+| **Battery Life** | **>180 Hours (<45 mW Power)** | Requires heavy solar panel |
+| **Edge AI** | **On-Device 96.25% TinyML AI** | None (Raw analog output only) |
